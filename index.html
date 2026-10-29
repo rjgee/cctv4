@@ -1,3 +1,8 @@
 <script>
-  window.location.href = "vnd.youtube://PiSwAy-blvA";
+  // Appends a random query string so the browser never loads a cached version
+  if (!window.location.search.includes('v=')) {
+    window.location.href = window.location.pathname + '?v=' + Date.now();
+  } else {
+    window.location.href = "vnd.youtube://YOUR_VIDEO_ID";
+  }
 </script>
